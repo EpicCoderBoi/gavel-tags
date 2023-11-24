@@ -80,9 +80,9 @@ def vote():
         if annotator.prev.id == int(request.form['prev_id']) and annotator.next.id == int(request.form['next_id']):
             
             if request.form['action'] == 'Great':
-                tags = Dec('Great')
+                tags = Tags('Great')
             elif request.form['action'] == 'Spectacular':
-                tags = tags('Spectacular')
+                tags = Tags('Spectacular')
 
             db.session.add(tags)
             

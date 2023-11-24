@@ -227,6 +227,10 @@ hr {
   background-color: $vote-color;
 }
 
+#tags-header {
+  background-color: $branding-lightGreen;
+}
+
 input[type=submit] {
   color: $light;
   background-color: $dark;

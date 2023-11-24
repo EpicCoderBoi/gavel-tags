@@ -28,6 +28,7 @@
           <th data-sort-method="caseInsensitiveSort">Name</th>
           <th data-sort-method="caseInsensitiveSort">Location</th>
           <th data-sort-method="caseInsensitiveSort">Description</th>
+          <th data-sort-method="caseInsensitiveSort">Tags</th>
           <th class="sort-default" data-sort-method="number" data-sort-order="desc">Mu</th>
           <th data-sort-method="number">Sigma Squared</th>
           <th data-sort-method="number">Votes</th>
@@ -45,6 +46,7 @@
           <td>{{ item.name }}</td>
           <td>{{ item.location }}</td>
           <td class="preserve-formatting">{{ item.description }}</td>
+          <td class="preserve-formatting">{{ item.tags }}</td>
           <td>{{ item.mu | round(4) }}</td>
           <td>{{ item.sigma_sq | round(4) }}</td>
           <td>{{ item_counts.get(item.id, 0) }}</td>

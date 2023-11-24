@@ -8,7 +8,7 @@ from flask import Response
 @utils.requires_auth
 def item_dump():
     items = Item.query.order_by(desc(Item.mu)).all()
-    data = [['Mu', 'Sigma Squared', 'Name', 'Location', 'Description', 'Active']]
+    data = [['Mu', 'Sigma Squared', 'Name', 'Location', 'Description', 'Tags', 'Active']]
     data += [[
         str(item.mu),
         str(item.sigma_sq),

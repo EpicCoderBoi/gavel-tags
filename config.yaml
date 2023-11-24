@@ -9,7 +9,7 @@ admin_password: SacHacks-V-2023
 #
 # if you are setting DISABLE_EMAIL, you can set this setting to '_unused_' (or
 # anything else).
-email_from: logistics@sachacks.io
+email_from: SacHacks-V-2023
 
 # can also be specified as the 'EMAIL_USER' environment variable
 #
@@ -28,7 +28,7 @@ email_password: SacHacks-V-2023
 #
 # this is used to prevent tampering with sessions. this should be some
 # reasonably long random string.
-secret_key: SacHacks-V-2023
+secret_key: oZhlpvCFFO
 
 #####################
 # Optional Settings #

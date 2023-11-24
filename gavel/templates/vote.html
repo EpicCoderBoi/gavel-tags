@@ -23,7 +23,53 @@
   </div>
 </div>
 
+
+
 <div class="item">
+
+  <div class="banner" id="tags-header">
+    <h1>Tags</h1>
+  </div>
+
+  <div class="info">
+    <form action="{{ url_for('vote') }}" method="post">
+      <p class="center">Choose the tags</p>
+
+      <div id="vote-previous" class="radio-button button-left">
+        <input type="checkbox" name="action" id="great-tag" value="Great">
+        <label for="great-tag">Great</label>
+      </div>
+
+      <div id="vote-current" class="radio-button button-right">
+        <input type="checkbox" name="action" id="amazing-tag" value="Amazing">
+        <label for="amazing-tag">Amazing</label>
+      </div>
+
+      <div id="vote-previous" class="radio-button button-left">
+        <input type="checkbox" name="action" id="spectacular-tag" value="Spectacular">
+        <label for="spectacular-tag">Spectacular</label>
+      </div>
+
+      <div id="vote-current" class="radio-button button-right">
+        <input type="checkbox" name="action" id="superb-tag" value="Superb">
+        <label for="superb-tag">Superb</label>
+      </div>
+
+      <div id="vote-previous" class="radio-button button-left">
+        <input type="checkbox" name="action" id="fantastic-tag" value="Fantastic">
+        <label for="fantastic-tag">Fantastic</label>
+      </div>
+
+      <div id="vote-current" class="radio-button button-right">
+        <input type="checkbox" name="action" id="marvelous-tag" value="Marvelous">
+        <label for="marvelous-tag">Marvelous</label>
+      </div>
+      </form>
+  </div>
+</div>
+
+<div class="item">
+
   <div class="banner" id="vote-header">
     <h1>Vote</h1>
   </div>
@@ -50,9 +96,11 @@
       <input type="hidden" name="prev_id" value="{{ prev.id }}">
       <input type="hidden" name="next_id" value="{{ next.id }}">
       <input type="hidden" name="_csrf_token" value="{{ csrf_token() }}">
-    </form>
+    
+      <script src="{{ url_for('static', filename='js/smart-button-toggle.js') }}"></script>
 
-    <script src="{{ url_for('static', filename='js/smart-button-toggle.js') }}"></script>
+    </form>
   </div>
 </div>
+
 {% endblock %}

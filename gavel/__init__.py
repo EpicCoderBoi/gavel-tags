@@ -35,6 +35,7 @@ celery.conf.update(app.config)
 from gavel.models import db
 db.app = app
 db.init_app(app)
+app.app_context().push()
 
 import gavel.template_filters # registers template filters
 

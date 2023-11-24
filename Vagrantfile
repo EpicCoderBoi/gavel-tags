@@ -10,6 +10,9 @@ Vagrant.configure(2) do |config|
   # disable default synced folder
   config.vm.synced_folder '.', '/vagrant', disabled: true
 
+  config.ssh.insert_key = false
+  
+  config.ssh.forward_agent = true
   # port forward
   config.vm.network 'forwarded_port', guest: 5000, host: 5000
 
